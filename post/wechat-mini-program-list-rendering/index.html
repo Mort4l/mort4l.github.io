@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title> 小程序列表渲染 | Makki&#39;s Blog</title>
+    
+    
+    
+    <link rel="stylesheet" href="/sass/main.min.ef042f420923448d063e8373b7705e5d8e2dac6c1aae2e9352c712586aefd7e3.css">
+</head>
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    <span class="emoji">
+                        🏃
+                    </span>
+                    
+                    Makki&#39;s Blog
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <button id="dark-mode-button"></button>
+            </div>
+            </div>
+    </div>
+</nav>
+        <main>
+            
+
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>小程序列表渲染</h1>
+                    <div class="post-meta">
+                        <div>
+                            By Makki on <time>May 27, 2021</time>
+                        </div>
+                        <div class="tags">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <h1 id="小程序列表渲染for循环">小程序列表渲染(for循环)</h1>
+<h3 id="code">code</h3>
+<p><code>&lt;view wx:for=&quot;{{[1,2,3,4]}}&quot;&gt;{{index}}哈哈哈{{item}}&lt;/view&gt;</code></p>
+<h3 id="out">out</h3>
+<pre><code>0哈哈哈1
+1哈哈哈2
+2哈哈哈3
+3哈哈哈4
+</code></pre><h3 id="code-1">code</h3>
+<p><code>&lt;view wx:for=&quot;{{[1,2,3,4]}}&quot; wx:for-index=&quot;i&quot; wx:for-item=&quot;content&quot;&gt;{{i}}哈哈哈{{content}}&lt;/view&gt;</code></p>
+<h3 id="out-1">out</h3>
+<pre><code>0哈哈哈1
+1哈哈哈2
+2哈哈哈3
+3哈哈哈4
+</code></pre><h3 id="code-2">code</h3>
+<p><code>&lt;view wx:for=&quot;{{[{name:'dava',age:18},{name:'mike',age:29}]}}&quot;&gt;name:{{item.name}}——age:{{item.age}}&lt;/view&gt;</code></p>
+<h3 id="out-2">out</h3>
+<pre><code>name:dava——age:18
+name:mike——age:29
+</code></pre>
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/post/vscode-shortcut-key-macos/" title="Previous post (older)">
+            <span>Previous</span>
+            vscode在macOS下的快捷键
+            </a>
+        
+        
+        
+    </nav>
+    
+</div>
+</main>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+    </section>
+    
+    <script async src="/js/features.min.c5d8f3350f5a652f526b982306299353824299adb7a3bd261ecffacc47087f66.js"></script>
+</footer>
+    </body>
+</html>

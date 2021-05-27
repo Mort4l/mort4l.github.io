@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title> Java获取键盘输入 | Makki&#39;s Blog</title>
+    
+    
+    
+    <link rel="stylesheet" href="/sass/main.min.ef042f420923448d063e8373b7705e5d8e2dac6c1aae2e9352c712586aefd7e3.css">
+</head>
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    <span class="emoji">
+                        🏃
+                    </span>
+                    
+                    Makki&#39;s Blog
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <button id="dark-mode-button"></button>
+            </div>
+            </div>
+    </div>
+</nav>
+        <main>
+            
+
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>Java获取键盘输入</h1>
+                    <div class="post-meta">
+                        <div>
+                            By Makki on <time>May 01, 2021</time>
+                        </div>
+                        <div class="tags">
+                            
+                            <a href="/tags/java/">Java</a>
+                            
+                            <a href="/tags/study/">Study</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>   <span class="c1">//导入Scanner包
+</span><span class="c1"></span>
+<span class="kd">class</span> <span class="nc">ScannerTest</span><span class="o">{</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+	<span class="n">Scanner</span> <span class="n">scan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>   <span class="c1">//创建scan对象
+</span><span class="c1"></span>	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&#34;请输入你的成绩：&#34;</span><span class="o">);</span>
+	<span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+	<span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">score</span><span class="o">==</span><span class="n">100</span><span class="o">)?</span><span class="s">&#34;BMW!&#34;</span><span class="o">:(</span><span class="n">score</span><span class="o">&gt;</span><span class="n">80</span><span class="o">)?</span><span class="s">&#34;iphone 12 pro max!&#34;</span><span class="o">:(</span><span class="n">score</span><span class="o">&gt;</span><span class="n">60</span><span class="o">)?</span><span class="s">&#34;ipad&#34;</span><span class="o">:</span><span class="s">&#34;nothing!&#34;</span><span class="o">;</span>
+	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>
+
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>获取到的内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>next</td>
+<td>String</td>
+</tr>
+<tr>
+<td>Int</td>
+<td>int</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/post/java-operator/" title="Previous post (older)">
+            <span>Previous</span>
+            Java运算符
+            </a>
+        
+        
+        
+        <a rel="next" href="/post/moviepy_question/" title="Next post (newer)">
+            <span>Next</span>
+            moviepy报错以及输出视频无声的解决方法
+            </a> 
+        
+    </nav>
+    
+</div>
+</main>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+    </section>
+    
+    <script async src="/js/features.min.c5d8f3350f5a652f526b982306299353824299adb7a3bd261ecffacc47087f66.js"></script>
+</footer>
+    </body>
+</html>
