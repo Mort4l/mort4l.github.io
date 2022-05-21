@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" prefix="og: http://ogp.me/ns#">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="Hugo 0.98.0" />
@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="" />
-  <meta property="og:url" content="https://mort4l.github.io/" />
-  <link rel="canonical" href="https://mort4l.github.io/" /><link rel="alternate" type="application/atom+xml" href="https://mort4l.github.ioindex.xml" title="Makki&#39;s Blog">
+  <meta property="og:url" content="https://mort4l.github.io/post/wechat-mini-program-list-rendering/" />
+  <link rel="canonical" href="https://mort4l.github.io/post/wechat-mini-program-list-rendering/" /><link rel="alternate" type="application/atom+xml" href="https://mort4l.github.ioindex.xml" title="Makki&#39;s Blog">
 
   <script type="application/ld+json">
   {
@@ -18,28 +18,34 @@
            "@type": "WebPage",
            "@id": "https:\/\/mort4l.github.io"
       },
-      "articleSection" : "",
-      "name" : "Makki\u0027s Blog",
-      "headline" : "Makki\u0027s Blog",
-      "description" : "",
+      "articleSection" : "post",
+      "name" : "小程序列表渲染",
+      "headline" : "小程序列表渲染",
+      "description" : "小程序列表渲染(for循环) code \u0026lt;view wx:for=\u0026quot;{{[1,2,3,4]}}\u0026quot;\u0026gt;{{index}}哈哈哈{{item}}\u0026lt;\/view\u0026gt;\nout 0哈哈哈1 1哈哈哈2 2哈哈哈3 3哈哈哈4 code \u0026lt;view wx:for=\u0026quot;{{[1,2,3,4]}}\u0026quot; wx:for-index=\u0026quot;i\u0026quot; wx:for-item=\u0026quot;content\u0026quot;\u0026gt;{{i}}哈哈哈{{content}}\u0026lt;\/view\u0026gt;\nout 0哈哈哈1 1哈哈哈2 2哈哈哈3 3哈哈哈4 code \u0026lt;view wx:for=\u0026quot;{{[{name:\u0027dava\u0027,age:18},{name:\u0027mike\u0027,age:29}]}}\u0026quot;\u0026gt;name:{{item.name}}——age:{{item.age}}\u0026lt;\/view\u0026gt;\nout name:dava——age:18 name:mike——age:29 ",
       "inLanguage" : "en-US",
       "author" : "",
       "creator" : "",
       "publisher": "",
       "accountablePerson" : "",
       "copyrightHolder" : "",
-      "copyrightYear" : "2022",
-      "datePublished": "2022-05-21 10:52:59 \u002b0800 CST",
-      "dateModified" : "2022-05-21 10:52:59 \u002b0800 CST",
-      "url" : "https:\/\/mort4l.github.io\/",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-05-27 23:24:04 \u002b0800 CST",
+      "dateModified" : "2021-05-27 23:24:04 \u002b0800 CST",
+      "url" : "https:\/\/mort4l.github.io\/post\/wechat-mini-program-list-rendering\/",
       "keywords" : [  ]
   }
 </script>
-<title>Makki&#39;s Blog</title>
-  <meta property="og:title" content="Makki&#39;s Blog" />
-  <meta property="og:type" content="website" />
-  <meta property="og:description" content="" />
-  <meta name="description" content="" />
+<title>小程序列表渲染</title>
+  <meta property="og:title" content="小程序列表渲染" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="小程序列表渲染(for循环) code &amp;lt;view wx:for=&amp;quot;{{[1,2,3,4]}}&amp;quot;&amp;gt;{{index}}哈哈哈{{item}}&amp;lt;/view&amp;gt;
+out 0哈哈哈1 1哈哈哈2 2哈哈哈3 3哈哈哈4 code &amp;lt;view wx:for=&amp;quot;{{[1,2,3,4]}}&amp;quot; wx:for-index=&amp;quot;i&amp;quot; wx:for-item=&amp;quot;content&amp;quot;&amp;gt;{{i}}哈哈哈{{content}}&amp;lt;/view&amp;gt;
+out 0哈哈哈1 1哈哈哈2 2哈哈哈3 3哈哈哈4 code &amp;lt;view wx:for=&amp;quot;{{[{name:&#39;dava&#39;,age:18},{name:&#39;mike&#39;,age:29}]}}&amp;quot;&amp;gt;name:{{item.name}}——age:{{item.age}}&amp;lt;/view&amp;gt;
+out name:dava——age:18 name:mike——age:29 " />
+  <meta name="description" content="小程序列表渲染(for循环) code &amp;lt;view wx:for=&amp;quot;{{[1,2,3,4]}}&amp;quot;&amp;gt;{{index}}哈哈哈{{item}}&amp;lt;/view&amp;gt;
+out 0哈哈哈1 1哈哈哈2 2哈哈哈3 3哈哈哈4 code &amp;lt;view wx:for=&amp;quot;{{[1,2,3,4]}}&amp;quot; wx:for-index=&amp;quot;i&amp;quot; wx:for-item=&amp;quot;content&amp;quot;&amp;gt;{{i}}哈哈哈{{content}}&amp;lt;/view&amp;gt;
+out 0哈哈哈1 1哈哈哈2 2哈哈哈3 3哈哈哈4 code &amp;lt;view wx:for=&amp;quot;{{[{name:&#39;dava&#39;,age:18},{name:&#39;mike&#39;,age:29}]}}&amp;quot;&amp;gt;name:{{item.name}}——age:{{item.age}}&amp;lt;/view&amp;gt;
+out name:dava——age:18 name:mike——age:29 " />
   <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="" />
   
 
@@ -66,10 +72,11 @@
 
 
 <body>
-  <article class="posts">
+  <article class="post " id="article">
     <div class="row">
       <div class="col-xs-12">
-        
+        <div class="site-header">
+          
 <header>
   <div class="header-title">
     <a href="/"
@@ -86,179 +93,71 @@
 </div>
 <div class="header-line"></div>
 
-        <div id="posts-list">
-          <section>
-            <h1 class="site-date-catalog">2022</h1>
-
-            
-            <div class="row posts-line">
-              <div class="posts-date col-xs-3 col-sm-2">
-                <time datetime="2022-05-21 10:52:59 CST">May 21</time>
-              </div>
-              <div class="posts-title col-xs-9 col-sm-10">
-                <div class="row">
-                  <div class="col-xs-11 col-sm-10">
-                    <a href="/post/swift-study/">Swift学习笔记</a>
-                  </div>
-                  <div class="col-xs-1 col-sm-2 posts-categories">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="row posts-line">
-              <div class="posts-date col-xs-3 col-sm-2">
-                <time datetime="2022-05-17 23:24:04 CST">May 17</time>
-              </div>
-              <div class="posts-title col-xs-9 col-sm-10">
-                <div class="row">
-                  <div class="col-xs-11 col-sm-10">
-                    <a href="/post/python-django/">Django学习笔记</a>
-                  </div>
-                  <div class="col-xs-1 col-sm-2 posts-categories">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="row posts-line">
-              <div class="posts-date col-xs-3 col-sm-2">
-                <time datetime="2022-05-11 00:00:00 UTC">May 11</time>
-              </div>
-              <div class="posts-title col-xs-9 col-sm-10">
-                <div class="row">
-                  <div class="col-xs-11 col-sm-10">
-                    <a href="/post/java-study/"> Java学习笔记</a>
-                  </div>
-                  <div class="col-xs-1 col-sm-2 posts-categories">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </section>
-          <section>
-            <h1 class="site-date-catalog">2021</h1>
-
-            
-            <div class="row posts-line">
-              <div class="posts-date col-xs-3 col-sm-2">
-                <time datetime="2021-05-27 23:24:04 CST">May 27</time>
-              </div>
-              <div class="posts-title col-xs-9 col-sm-10">
-                <div class="row">
-                  <div class="col-xs-11 col-sm-10">
-                    <a href="/post/wechat-mini-program-list-rendering/">小程序列表渲染</a>
-                  </div>
-                  <div class="col-xs-1 col-sm-2 posts-categories">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="row posts-line">
-              <div class="posts-date col-xs-3 col-sm-2">
-                <time datetime="2021-05-17 10:43:09 CST">May 17</time>
-              </div>
-              <div class="posts-title col-xs-9 col-sm-10">
-                <div class="row">
-                  <div class="col-xs-11 col-sm-10">
-                    <a href="/post/vscode-shortcut-key-macos/">vscode在macOS下的快捷键</a>
-                  </div>
-                  <div class="col-xs-1 col-sm-2 posts-categories">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="row posts-line">
-              <div class="posts-date col-xs-3 col-sm-2">
-                <time datetime="2021-05-16 10:52:59 CST">May 16</time>
-              </div>
-              <div class="posts-title col-xs-9 col-sm-10">
-                <div class="row">
-                  <div class="col-xs-11 col-sm-10">
-                    <a href="/post/moviepy_question/">moviepy报错以及输出视频无声的解决方法</a>
-                  </div>
-                  <div class="col-xs-1 col-sm-2 posts-categories">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="row posts-line">
-              <div class="posts-date col-xs-3 col-sm-2">
-                <time datetime="2021-05-01 12:00:00 UTC">May 01</time>
-              </div>
-              <div class="posts-title col-xs-9 col-sm-10">
-                <div class="row">
-                  <div class="col-xs-11 col-sm-10">
-                    <a href="/post/java-get-input/">Java获取键盘输入</a>
-                  </div>
-                  <div class="col-xs-1 col-sm-2 posts-categories">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="row posts-line">
-              <div class="posts-date col-xs-3 col-sm-2">
-                <time datetime="2021-05-01 08:00:00 UTC">May 01</time>
-              </div>
-              <div class="posts-title col-xs-9 col-sm-10">
-                <div class="row">
-                  <div class="col-xs-11 col-sm-10">
-                    <a href="/post/java-operator/">Java运算符</a>
-                  </div>
-                  <div class="col-xs-1 col-sm-2 posts-categories">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="row posts-line">
-              <div class="posts-date col-xs-3 col-sm-2">
-                <time datetime="2021-05-01 00:01:00 UTC">May 01</time>
-              </div>
-              <div class="posts-title col-xs-9 col-sm-10">
-                <div class="row">
-                  <div class="col-xs-11 col-sm-10">
-                    <a href="/post/java-basic-data-type/">Java基本数据类型</a>
-                  </div>
-                  <div class="col-xs-1 col-sm-2 posts-categories">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="row posts-line">
-              <div class="posts-date col-xs-3 col-sm-2">
-                <time datetime="2021-05-01 00:00:00 UTC">May 01</time>
-              </div>
-              <div class="posts-title col-xs-9 col-sm-10">
-                <div class="row">
-                  <div class="col-xs-11 col-sm-10">
-                    <a href="/post/hello-world/">Hello World!</a>
-                  </div>
-                  <div class="col-xs-1 col-sm-2 posts-categories">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </section>
-          
         </div>
+        <header class="post-header">
+          <h1 class="post-title">小程序列表渲染</h1>
+          
+          <div class="row post-desc">
+            <div class="col-xs-6">
+              
+              <time class="post-date" datetime="2021-05-27 23:24:04 CST">
+                27 May 2021
+              </time>
+              
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+          
+        </header>
+
+        <div class="post-content markdown-body">
+          
+          <h1 id="小程序列表渲染for循环">小程序列表渲染(for循环)</h1>
+<h3 id="code">code</h3>
+<p><code>&lt;view wx:for=&quot;{{[1,2,3,4]}}&quot;&gt;{{index}}哈哈哈{{item}}&lt;/view&gt;</code></p>
+<h3 id="out">out</h3>
+<pre tabindex="0"><code>0哈哈哈1
+1哈哈哈2
+2哈哈哈3
+3哈哈哈4
+</code></pre><h3 id="code-1">code</h3>
+<p><code>&lt;view wx:for=&quot;{{[1,2,3,4]}}&quot; wx:for-index=&quot;i&quot; wx:for-item=&quot;content&quot;&gt;{{i}}哈哈哈{{content}}&lt;/view&gt;</code></p>
+<h3 id="out-1">out</h3>
+<pre tabindex="0"><code>0哈哈哈1
+1哈哈哈2
+2哈哈哈3
+3哈哈哈4
+</code></pre><h3 id="code-2">code</h3>
+<p><code>&lt;view wx:for=&quot;{{[{name:'dava',age:18},{name:'mike',age:29}]}}&quot;&gt;name:{{item.name}}——age:{{item.age}}&lt;/view&gt;</code></p>
+<h3 id="out-2">out</h3>
+<pre tabindex="0"><code>name:dava——age:18
+name:mike——age:29
+</code></pre>
+        </div>
+
+        <div class="row middle-xs">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+        
+          <div class="row">
+            <div class="col-xs-12">
+              
+            </div>
+          </div>
+
+          
+
+
+
+          
+          
+          <div style="height: 50px;"></div>
+          
+        
 
         <div class="site-footer">
   
@@ -278,6 +177,8 @@
     
   
 </script>
+
+  
 
 </body>
 

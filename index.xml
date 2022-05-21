@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Makki&#39;s Blog</title>
+    <link>https://mort4l.github.io/</link>
+    <description>Recent content on Makki&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 21 May 2022 10:52:59 +0800</lastBuildDate><atom:link href="https://mort4l.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift学习笔记</title>
+      <link>https://mort4l.github.io/post/swift-study/</link>
+      <pubDate>Sat, 21 May 2022 10:52:59 +0800</pubDate>
+      
+      <guid>https://mort4l.github.io/post/swift-study/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176  import Darwin print(&amp;#34;hello world&amp;#34;); var name = &amp;#34;Bob&amp;#34; //创建变量并赋值 let birth_year:Int = 1997 //创建指定类型变量 print(&amp;#34;I am &amp;#34;+String(name)+&amp;#34; \(2022 - birth_year)years old!</description>
+    </item>
+    
+    <item>
+      <title>Django学习笔记</title>
+      <link>https://mort4l.github.io/post/python-django/</link>
+      <pubDate>Tue, 17 May 2022 23:24:04 +0800</pubDate>
+      
+      <guid>https://mort4l.github.io/post/python-django/</guid>
+      <description>初始化 使用命令django-admin startproject HelloWorld创建一个名为Hello World的项目
+使用模板和静态文件夹 在HelloWorld的根目录创建templates和statics文件夹
+在settings.py里设置TEMPLATES目录&#39;DIRS&#39;: [os.path.join(BASE_DIR,&amp;quot;templates&amp;quot;)],
+底部加入STATICFILES_DIRS=[os.path.join(BASE_DIR,&amp;quot;statics&amp;quot;)]加入statics目录
+设置URL和view 在urls.py的urlpatterns列表里加入path(&#39;网址路径/&#39;,views.视图函数), 
+views.py
+1 2 3 4 5 6  from django.shortcuts import render def Index(request): context = {} context[&amp;#34;name&amp;#34;] = &amp;#34;Makki&amp;#34; return render(request,&amp;#39;index.html&amp;#39;,context)	//渲染index.html,传入列表context   自定义标签 自定义过滤器 </description>
+    </item>
+    
+    <item>
+      <title> Java学习笔记</title>
+      <link>https://mort4l.github.io/post/java-study/</link>
+      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mort4l.github.io/post/java-study/</guid>
+      <description>一个源文件只能有一个public类，所有类都可有main方法。 如果源文件包含public类，则文件必须按该类名命名。
+ 注释方式 1 2 3 4 5 6 7 8 9 10 11 12  // 注释内容 单行注释  /*注释内容 多行注释*/ 长注释，生成文档 /** *注 *释 * 内 *容 */   基本数据类型    类型 占用字节 占用位数 数值长度     byte 1 8 -128~127(-2的7次方到2的7次方-1)｜   short 2 16 -32768~32767(-2的15次方到2的15次方-1)   int 4 32 -2的31次方到2的31次方-1   long 8 64 -2的63次方到2的63次方-1   float 4 32 （e-45是乘以10的负45次方，e+38是乘以10的38次方) （2的-149次方~2的128次方-1）   double 8 64 (2的-1074次方 ~ 2的1024次方)   char 2 16 &amp;mdash;   boolean &amp;mdash; 1 True/False    var a = 1122; //局部变量可不需要声明类型</description>
+    </item>
+    
+    <item>
+      <title>小程序列表渲染</title>
+      <link>https://mort4l.github.io/post/wechat-mini-program-list-rendering/</link>
+      <pubDate>Thu, 27 May 2021 23:24:04 +0800</pubDate>
+      
+      <guid>https://mort4l.github.io/post/wechat-mini-program-list-rendering/</guid>
+      <description>小程序列表渲染(for循环) code &amp;lt;view wx:for=&amp;quot;{{[1,2,3,4]}}&amp;quot;&amp;gt;{{index}}哈哈哈{{item}}&amp;lt;/view&amp;gt;
+out 0哈哈哈1 1哈哈哈2 2哈哈哈3 3哈哈哈4 code &amp;lt;view wx:for=&amp;quot;{{[1,2,3,4]}}&amp;quot; wx:for-index=&amp;quot;i&amp;quot; wx:for-item=&amp;quot;content&amp;quot;&amp;gt;{{i}}哈哈哈{{content}}&amp;lt;/view&amp;gt;
+out 0哈哈哈1 1哈哈哈2 2哈哈哈3 3哈哈哈4 code &amp;lt;view wx:for=&amp;quot;{{[{name:&#39;dava&#39;,age:18},{name:&#39;mike&#39;,age:29}]}}&amp;quot;&amp;gt;name:{{item.name}}——age:{{item.age}}&amp;lt;/view&amp;gt;
+out name:dava——age:18 name:mike——age:29 </description>
+    </item>
+    
+    <item>
+      <title>vscode在macOS下的快捷键</title>
+      <link>https://mort4l.github.io/post/vscode-shortcut-key-macos/</link>
+      <pubDate>Mon, 17 May 2021 10:43:09 +0800</pubDate>
+      
+      <guid>https://mort4l.github.io/post/vscode-shortcut-key-macos/</guid>
+      <description>全局  Command + Shift + P / F1 显示命令面板
+Command + P 快速打开
+Command + Shift + N 打开新窗口
+Command + W 关闭窗口
+基本  Command + X 剪切（未选中文本的情况下，剪切光标所在行）
+Command + C 复制（未选中文本的情况下，复制光标所在行）
+Option + Up 向上移动行
+Option + Down 向下移动行
+Option + Shift + Up 向上复制行
+Option + Shift + Down 向下复制行
+Command + Shift + K 删除行
+Command + Enter 下一行插入
+Command + Shift + Enter 上一行插入</description>
+    </item>
+    
+    <item>
+      <title>moviepy报错以及输出视频无声的解决方法</title>
+      <link>https://mort4l.github.io/post/moviepy_question/</link>
+      <pubDate>Sun, 16 May 2021 10:52:59 +0800</pubDate>
+      
+      <guid>https://mort4l.github.io/post/moviepy_question/</guid>
+      <description>搞了一晚上的moviepy剪辑，加网上的各种参数以及剪切视频/音乐长度。都无法解决视频无声的问题。
+而且把视频载入进去后无法直接输出。
+正准备放弃时，发现moviepy的版本不是最新的。
+更新了之后不仅视频有背景音乐而且连报错都解决了。</description>
+    </item>
+    
+    <item>
+      <title>Java获取键盘输入</title>
+      <link>https://mort4l.github.io/post/java-get-input/</link>
+      <pubDate>Sat, 01 May 2021 12:00:00 +0000</pubDate>
+      
+      <guid>https://mort4l.github.io/post/java-get-input/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13  import java.util.Scanner; //导入Scanner包  class ScannerTest{ public static void main(String[] args){ Scanner scan = new Scanner(System.in); //创建scan对象 	System.out.printf(&amp;#34;请输入你的成绩：&amp;#34;); int score = scan.nextInt(); String result = (score==100)?&amp;#34;BMW!&amp;#34;:(score&amp;gt;80)?&amp;#34;iphone 12 pro max!&amp;#34;:(score&amp;gt;60)?&amp;#34;ipad&amp;#34;:&amp;#34;nothing!&amp;#34;; System.out.printf(result); } }      方法 获取到的内容     next String   Int int   double Double   boolean Boolean    </description>
+    </item>
+    
+    <item>
+      <title>Java运算符</title>
+      <link>https://mort4l.github.io/post/java-operator/</link>
+      <pubDate>Sat, 01 May 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://mort4l.github.io/post/java-operator/</guid>
+      <description>算术运算符 1 2 3  int a=10; int b = a++; //输出a=11 b=10   1 2 3  int a=10; int b = a--; //输出a=9 b=10   1 2 3  int a=10; int b = ++a; //输出a=11 b=11   1 2 3  int a=10; int b = --a; //输出a=9 b=9   逻辑运算符    符号 区别     &amp;amp; 左边条件false也继续执行   &amp;amp;&amp;amp; 左边条件false不继续执行右边   | 左边条件true也继续执行   || 左边条件true不继续执行右边    位运算符    符号 备注     &amp;laquo; 在一定范围内每向左移1位相当于*2   &amp;raquo; 在一定范围内每向右移1位相当于/2   &amp;amp; 二进制进行&amp;amp;运算   | 二进制进行|运算   ^ 二进制进行异或运算   ~ 二进制按补码取反    三元运算符 1 2  boolean m = (true)?</description>
+    </item>
+    
+    <item>
+      <title>Java基本数据类型</title>
+      <link>https://mort4l.github.io/post/java-basic-data-type/</link>
+      <pubDate>Sat, 01 May 2021 00:01:00 +0000</pubDate>
+      
+      <guid>https://mort4l.github.io/post/java-basic-data-type/</guid>
+      <description>整数型 byte short int long
+浮点型 float double
+字符型 char
+布尔型 boolean
+占用内存空间    类型 大小     byte 1字节   short 2字节   int 4字节   long 8字节   char 2字节   float 4字节   double 8字节     long与float类型结尾需要L与F，通常使用int和double
+ </description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://mort4l.github.io/post/hello-world/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mort4l.github.io/post/hello-world/</guid>
+      <description>Hello World !
+this is my first post!!</description>
+    </item>
+    
+  </channel>
+</rss>

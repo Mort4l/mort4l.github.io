@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.98.0" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="" />
+  <meta property="og:url" content="https://mort4l.github.io/post/swift-study/" />
+  <link rel="canonical" href="https://mort4l.github.io/post/swift-study/" /><link rel="alternate" type="application/atom+xml" href="https://mort4l.github.ioindex.xml" title="Makki&#39;s Blog">
+
+  <script type="application/ld+json">
+  {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+           "@type": "WebPage",
+           "@id": "https:\/\/mort4l.github.io"
+      },
+      "articleSection" : "post",
+      "name" : "Swift学习笔记",
+      "headline" : "Swift学习笔记",
+      "description" : "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176  import Darwin print(\u0026#34;hello world\u0026#34;); var name = \u0026#34;Bob\u0026#34; \/\/创建变量并赋值 let birth_year:Int = 1997 \/\/创建指定类型变量 print(\u0026#34;I am \u0026#34;\u002bString(name)\u002b\u0026#34; \\(2022 - birth_year)years old!",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2022",
+      "datePublished": "2022-05-21 10:52:59 \u002b0800 CST",
+      "dateModified" : "2022-05-21 10:52:59 \u002b0800 CST",
+      "url" : "https:\/\/mort4l.github.io\/post\/swift-study\/",
+      "keywords" : [  ]
+  }
+</script>
+<title>Swift学习笔记</title>
+  <meta property="og:title" content="Swift学习笔记" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176  import Darwin print(&amp;#34;hello world&amp;#34;); var name = &amp;#34;Bob&amp;#34; //创建变量并赋值 let birth_year:Int = 1997 //创建指定类型变量 print(&amp;#34;I am &amp;#34;&#43;String(name)&#43;&amp;#34; \(2022 - birth_year)years old!" />
+  <meta name="description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176  import Darwin print(&amp;#34;hello world&amp;#34;); var name = &amp;#34;Bob&amp;#34; //创建变量并赋值 let birth_year:Int = 1997 //创建指定类型变量 print(&amp;#34;I am &amp;#34;&#43;String(name)&#43;&amp;#34; \(2022 - birth_year)years old!" />
+  <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="" />
+  
+
+  
+    <style>body{font-family:bree serif,sans-serif;-webkit-font-smoothing:antialiased;margin:0 20px}article{max-width:800px;margin-left:auto;margin-right:auto}a{color:#000;text-decoration:none}a:hover{font-weight:600;text-decoration:underline}.post-ads{margin:50px 0}.markdown-body{font-size:18px;max-width:100%}.markdown-body a{text-decoration:underline;text-decoration-color:#000}.markdown-body blockquote{margin:0;padding:0 1em;color:#57606a;border-left:.25em solid #d0d7de}.markdown-body pre{padding:16px;overflow:auto;border-radius:10px}.markdown-body code{padding:.2em .4em;font-size:85%;background-color:#f6f8fa;border-radius:6px}.markdown-body pre>code{padding:0;font-size:100%;background-color:inherit;border:0}.Chinese .markdown-body{line-height:200%}.site-date-catalog{font-size:2rem}.header-title{font-size:2rem;font-weight:700;margin-top:32px;font-family:bungee shade,sans-serif}.header-title a{text-decoration:none}.header-subtitle{color:#666}.header-items{margin:10px 0}.header-item{margin:0 5px}.header-line{width:100%;border-width:2px;border-color:#482936;border-style:solid none none none}.lang-switch{font-weight:600}#posts-list{min-height:600px}.posts-line{font-size:1.2rem;margin:12px 0}.posts-categories{font-size:.8rem;margin:auto;text-align:center}.posts-category{padding:3px 0;border:#000 2px solid;border-radius:5px}.site-footer{margin-top:50px}.site-footer-item{margin-right:12px}.post-content img{max-width:100%;display:block;margin-right:auto;margin-top:12px}.post-header{margin-bottom:50px}.post-title{font-size:2rem;font-weight:600}.post-tags{display:inline;font-weight:600;padding:2px 5px;margin-right:6px;border:#000 2px solid;border-radius:5px}.post-date{font-weight:800;font-style:italic}.post-author{float:right;font-weight:600}.page-content{min-height:60%}.post-content{margin-bottom:50px}.post-content p{hyphens:auto;line-height:1.8;text-justify:ideographic;margin-bottom:1em}.related-content{border-width:3px;border-style:solid;border-color:#000;padding:0 10px;margin-bottom:50px;margin-top:100px}.related-content li{margin:5px 0}.taxonomy-term{font-size:3rem}.gallery-img{text-align:center}.gallery-img span{text-align:center}.gallery-img-desc{font-size:.8em;font-weight:800}#disqus_thread{position:relative}#disqus_thread:after{content:"";display:block;height:55px;width:100%;position:absolute;bottom:0;background:#fff}@media screen and (max-width:600px){.header-title,.header-subtitle,.header-items{text-align:center}.posts-line{font-size:16px}.markdown-body{font-size:16px}.post-title{font-size:2rem}.post-content p{letter-spacing:.05em}}@media screen and (max-width:48em){.posts-category{display:none}}</style>
+  
+  
+    <style>.container,.container-fluid{margin-right:auto;margin-left:auto}.container-fluid{padding-right:2rem;padding-left:2rem}.row{box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 auto;flex:initial;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-.5rem;margin-left:-.5rem}.row.reverse{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.col.reverse{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}.col-xs,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-offset-0,.col-xs-offset-1,.col-xs-offset-10,.col-xs-offset-11,.col-xs-offset-12,.col-xs-offset-2,.col-xs-offset-3,.col-xs-offset-4,.col-xs-offset-5,.col-xs-offset-6,.col-xs-offset-7,.col-xs-offset-8,.col-xs-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-xs{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-xs-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-xs-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-xs-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-xs-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-xs-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-xs-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-xs-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-xs-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-xs-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-xs-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-xs-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-xs-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-xs-offset-0{margin-left:0}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-11{margin-left:91.66666667%}.start-xs{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-xs{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-xs{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-xs{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-xs{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-xs{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-xs{-ms-flex-pack:distribute;justify-content:space-around}.between-xs{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-xs{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-xs{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}@media only screen and (min-width:48em){.container{width:49rem}.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-offset-0,.col-sm-offset-1,.col-sm-offset-10,.col-sm-offset-11,.col-sm-offset-12,.col-sm-offset-2,.col-sm-offset-3,.col-sm-offset-4,.col-sm-offset-5,.col-sm-offset-6,.col-sm-offset-7,.col-sm-offset-8,.col-sm-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-sm{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-sm-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-sm-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-sm-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-sm-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-sm-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-sm-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-sm-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-sm-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-sm-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-sm-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-sm-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-sm-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-sm-offset-0{margin-left:0}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-11{margin-left:91.66666667%}.start-sm{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-sm{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-sm{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-sm{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-sm{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-sm{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-sm{-ms-flex-pack:distribute;justify-content:space-around}.between-sm{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-sm{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-sm{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}@media only screen and (min-width:64em){.container{width:65rem}.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-offset-0,.col-md-offset-1,.col-md-offset-10,.col-md-offset-11,.col-md-offset-12,.col-md-offset-2,.col-md-offset-3,.col-md-offset-4,.col-md-offset-5,.col-md-offset-6,.col-md-offset-7,.col-md-offset-8,.col-md-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-md{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-md-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-md-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-md-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-md-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-md-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-md-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-md-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-md-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-md-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-md-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-md-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-md-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-md-offset-0{margin-left:0}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-3{margin-left:25%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-6{margin-left:50%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-9{margin-left:75%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-11{margin-left:91.66666667%}.start-md{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-md{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-md{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-md{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-md{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-md{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-md{-ms-flex-pack:distribute;justify-content:space-around}.between-md{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-md{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-md{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}@media only screen and (min-width:75em){.container{width:76rem}.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-offset-0,.col-lg-offset-1,.col-lg-offset-10,.col-lg-offset-11,.col-lg-offset-12,.col-lg-offset-2,.col-lg-offset-3,.col-lg-offset-4,.col-lg-offset-5,.col-lg-offset-6,.col-lg-offset-7,.col-lg-offset-8,.col-lg-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-lg{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-lg-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-lg-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-lg-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-lg-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-lg-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-lg-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-lg-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-lg-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-lg-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-lg-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-lg-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-lg-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-lg-offset-0{margin-left:0}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-11{margin-left:91.66666667%}.start-lg{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-lg{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-lg{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-lg{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-lg{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-lg{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-lg{-ms-flex-pack:distribute;justify-content:space-around}.between-lg{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-lg{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-lg{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}</style>
+  
+
+  
+
+  <link href="/index.xml" rel="alternate" type="application/rss+xml"
+    title="Makki&#39;s Blog">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Bungee+Shade" rel="stylesheet">
+  
+  
+
+  
+  
+</head>
+
+
+<body>
+  <article class="post " id="article">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="site-header">
+          
+<header>
+  <div class="header-title">
+    <a href="/"
+      ></a
+    >
+  </div>
+  <div class="header-subtitle"></div>
+</header>
+<div class="row end-md center-xs header-items">
+  
+</div>
+<div class="row end-xs">
+   
+</div>
+<div class="header-line"></div>
+
+        </div>
+        <header class="post-header">
+          <h1 class="post-title">Swift学习笔记</h1>
+          
+          <div class="row post-desc">
+            <div class="col-xs-6">
+              
+              <time class="post-date" datetime="2022-05-21 10:52:59 CST">
+                21 May 2022
+              </time>
+              
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+          
+        </header>
+
+        <div class="post-content markdown-body">
+          
+          <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">Darwin</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="s">&#34;hello world&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">name</span> <span class="p">=</span> <span class="s">&#34;Bob&#34;</span>    <span class="c1">//创建变量并赋值</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">birth_year</span><span class="p">:</span><span class="nb">Int</span> <span class="p">=</span> <span class="mi">1997</span>   <span class="c1">//创建指定类型变量</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="s">&#34;I am &#34;</span><span class="o">+</span><span class="nb">String</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">+</span><span class="s">&#34; </span><span class="si">\(</span><span class="mi">2022</span> <span class="o">-</span> <span class="n">birth_year</span><span class="si">)</span><span class="s"> years old!&#34;</span><span class="p">)</span>  <span class="c1">//前面是拼接字符串，后面是格式化字符串</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">books</span> <span class="p">=</span> <span class="p">[</span><span class="nb">String</span><span class="p">]()</span>  <span class="c1">//创建列表并指定值类型（类型可指定为Any，任何类型）</span>
+</span></span><span class="line"><span class="cl"><span class="n">books</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;Java&#34;</span><span class="p">,</span><span class="s">&#34;Python&#34;</span><span class="p">,</span><span class="s">&#34;C#&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">books</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#34;Swift&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">books</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">=</span> <span class="s">&#34;C++&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">family</span> <span class="p">=</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span><span class="nb">Any</span><span class="p">]()</span> <span class="c1">//创建字典并指定键和值类型（类型可指定为Any，任何类型）</span>
+</span></span><span class="line"><span class="cl"><span class="n">family</span><span class="p">=[</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;sister&#34;</span><span class="p">:</span><span class="s">&#34;Marry&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;brother&#34;</span><span class="p">:</span><span class="s">&#34;Jhon&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;mother&#34;</span><span class="p">:</span><span class="s">&#34;Alice&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;father&#34;</span><span class="p">:</span><span class="s">&#34;Mike&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">..</span><span class="mi">3</span><span class="p">{</span>     <span class="c1">//0...3创建一个0到3到列表（包含3）</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//遍历列表内容</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">book</span> <span class="k">in</span> <span class="n">books</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;I hava a </span><span class="si">\(</span><span class="n">book</span><span class="si">)</span><span class="s"> book&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//遍历字典内容</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">in</span> <span class="n">family</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;My </span><span class="si">\(</span><span class="n">i</span><span class="si">)</span><span class="s"> name is </span><span class="si">\(</span><span class="n">j</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">family</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;My </span><span class="si">\(</span><span class="n">i</span><span class="p">.</span><span class="n">key</span><span class="si">)</span><span class="s"> name is </span><span class="si">\(</span><span class="n">i</span><span class="p">.</span><span class="n">value</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">students</span><span class="p">=[</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;张三&#34;</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;李四&#34;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;王五&#34;</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">age</span><span class="p">)</span> <span class="k">in</span> <span class="n">students</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="n">name</span><span class="si">)</span><span class="s">不可以看片&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="n">name</span><span class="si">)</span><span class="s">可以看片&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">age</span> <span class="p">=</span> <span class="mi">15</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">switch</span> <span class="n">age</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;age is 15&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">15</span><span class="p">,</span><span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;age is 15 or 20&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fallthrough</span>     <span class="c1">//匹配成功后不论下一个条件都运行</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">30</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;age is 30&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="mi">31</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;age is 31&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">default</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;unknown value&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//创建函数</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">verify</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">String</span><span class="p">,</span><span class="n">age</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">text</span> <span class="p">=</span> <span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="n">name</span><span class="si">)</span><span class="s"> is </span><span class="si">\(</span><span class="n">age</span><span class="si">)</span><span class="s"> years old&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">text</span> <span class="o">+=</span> <span class="s">&#34;，不可以看片&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">text</span> <span class="o">+=</span> <span class="s">&#34;，可以看片&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">text</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">verify</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="s">&#34;bob&#34;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span><span class="mi">163</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">a</span><span class="p">(</span><span class="kc">_</span> <span class="n">name</span><span class="p">:</span><span class="nb">String</span><span class="p">,</span><span class="kc">_</span> <span class="n">name1</span><span class="p">:</span><span class="nb">String</span><span class="p">){</span>  <span class="c1">//参数前面加上_可在调用时不指定参数名</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="o">+</span><span class="n">name</span><span class="o">+</span><span class="n">name1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">(</span><span class="s">&#34;aaa&#34;</span><span class="p">,</span><span class="s">&#34;bbb&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//获取列表里的最大最小值</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">minMax</span><span class="p">(</span><span class="n">list</span><span class="p">:[</span><span class="nb">Int</span><span class="p">])</span> <span class="p">-&gt;</span> <span class="p">(</span><span class="bp">min</span><span class="p">:</span><span class="nb">Int</span><span class="p">,</span><span class="bp">max</span><span class="p">:</span><span class="nb">Int</span><span class="p">){</span>   <span class="c1">//传入参数list为int列表，返回值为元组</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">min</span> <span class="p">=</span> <span class="n">list</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="bp">max</span> <span class="p">=</span> <span class="n">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>     <span class="c1">//初始化最小值和最大值为列表第一个元素</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">num</span> <span class="k">in</span> <span class="n">list</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="bp">min</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">min</span> <span class="p">=</span> <span class="n">num</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span><span class="k">else</span> <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="bp">max</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">max</span> <span class="p">=</span> <span class="n">num</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="bp">min</span><span class="p">,</span><span class="bp">max</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">l</span> <span class="p">=</span> <span class="p">[</span><span class="mi">31</span><span class="p">,</span><span class="mi">3125</span><span class="p">,</span><span class="mi">532</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">b</span> <span class="p">=</span> <span class="n">minMax</span><span class="p">(</span><span class="n">list</span><span class="p">:</span> <span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="s">&#34;最小值为</span><span class="si">\(</span><span class="n">b</span><span class="p">.</span><span class="bp">min</span><span class="si">)</span><span class="s">,最大值为</span><span class="si">\(</span><span class="n">b</span><span class="p">.</span><span class="bp">max</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//设置外部参数名和内部参数名</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span> <span class="n">a</span><span class="p">:</span><span class="nb">Int</span><span class="p">,</span><span class="n">num2</span> <span class="n">b</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="mi">22</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//在指定类型后面加上...参数可以传入多个值</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">say</span><span class="p">(</span><span class="n">members</span><span class="p">:</span><span class="nb">Any</span><span class="p">...){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">members</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">say</span><span class="p">(</span><span class="n">members</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="s">&#34;bob&#34;</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//使用函数类型</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">num</span> <span class="p">:(</span><span class="nb">Int</span><span class="p">,</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">=</span> <span class="n">add</span>     <span class="c1">//“定义一个叫做 num 的变量，类型是‘一个有两个 Int 型的参数并返回一个 Int 型的值的函数’，并让这个新变量指向 add 函数”。</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">num</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//函数嵌套,外部的函数可以调用函数内定义的函数</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">tools</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span><span class="nb">Int</span><span class="p">,</span><span class="n">num2</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;()</span> <span class="p">-&gt;</span> <span class="nb">Int</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">num</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">add</span><span class="p">()-&gt;</span><span class="nb">Int</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">num</span> <span class="p">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">num</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">add</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">f</span> <span class="p">=</span> <span class="n">tools</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span> <span class="mi">33</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="mi">22</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">f</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">studname</span> <span class="p">=</span> <span class="p">{</span><span class="bp">print</span><span class="p">(</span><span class="s">&#34;这是闭包&#34;</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl"><span class="n">studname</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">add1</span> <span class="p">=</span> <span class="p">{(</span><span class="n">a</span><span class="p">:</span><span class="nb">Int</span><span class="p">,</span><span class="n">b</span><span class="p">:</span><span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="k">in</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">result</span> <span class="p">=</span> <span class="n">add1</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">list1</span> <span class="p">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">list1</span><span class="p">.</span><span class="bp">sorted</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="s">&#34;C&#34;</span> <span class="o">&gt;</span> <span class="s">&#34;B&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">r</span> <span class="p">=</span> <span class="n">list1</span><span class="p">.</span><span class="bp">sorted</span><span class="p">(</span><span class="n">by</span><span class="p">:</span> <span class="o">&gt;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//类</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Player</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">score</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">score</span><span class="p">:</span><span class="nb">Int</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">score</span> <span class="p">=</span> <span class="n">score</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">playerLevel</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">score</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="s">&#34;新手玩家&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span><span class="k">else</span> <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">score</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="s">&#34;普通玩家&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">score</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="s">&#34;大师玩家&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="s">&#34;游客&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">mike</span> <span class="p">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">score</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">mike</span><span class="p">.</span><span class="n">playerLevel</span><span class="p">())</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+        </div>
+
+        <div class="row middle-xs">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+        
+          <div class="row">
+            <div class="col-xs-12">
+              
+            </div>
+          </div>
+
+          
+
+
+
+          
+          
+          <div style="height: 50px;"></div>
+          
+        
+
+        <div class="site-footer">
+  
+  
+</div>
+
+      </div>
+    </div>
+  </article>
+
+  
+
+<script>
+  
+  
+    
+    
+  
+</script>
+
+  
+
+</body>
+
+</html>
