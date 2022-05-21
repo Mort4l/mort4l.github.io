@@ -231,6 +231,83 @@
 </span><span class="lnt">174
 </span><span class="lnt">175
 </span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">Darwin</span>
@@ -407,8 +484,85 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">mike</span> <span class="p">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">score</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">mike</span><span class="p">.</span><span class="n">playerLevel</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">mike</span> <span class="p">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">score</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span>    <span class="c1">//实例化对象</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">mike</span><span class="p">.</span><span class="n">playerLevel</span><span class="p">())</span>   <span class="c1">//调用对象函数</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">LolPlayer</span><span class="p">:</span><span class="n">Player</span><span class="p">{</span>     <span class="c1">//继承类</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">playerName</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">playerName</span><span class="p">:</span><span class="nb">String</span><span class="p">,</span><span class="n">score</span><span class="p">:</span><span class="nb">Int</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">score</span><span class="p">:</span> <span class="n">score</span><span class="p">)</span>    <span class="c1">//调用父方法</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">playerName</span> <span class="p">=</span> <span class="n">playerName</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">say</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;我是 </span><span class="si">\(</span><span class="kc">self</span><span class="p">.</span><span class="n">playerName</span><span class="si">)</span><span class="s">,我的等级是</span><span class="si">\(</span><span class="kc">self</span><span class="p">.</span><span class="n">playerLevel</span><span class="si">())</span><span class="s">,我有</span><span class="si">\(</span><span class="kc">self</span><span class="p">.</span><span class="n">money</span><span class="si">)</span><span class="s">金币&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">money</span><span class="p">:</span><span class="nb">Int</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">get</span><span class="p">{</span>        <span class="c1">//money的获取属性</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">self</span><span class="p">.</span><span class="n">score</span> <span class="o">*</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">set</span><span class="p">{</span>         <span class="c1">//money的设置属性</span>
+</span></span><span class="line"><span class="cl">            <span class="kc">self</span><span class="p">.</span><span class="n">score</span> <span class="p">=</span> <span class="n">newValue</span> <span class="o">/</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">player1</span> <span class="p">=</span> <span class="n">LolPlayer</span><span class="p">(</span><span class="n">playerName</span><span class="p">:</span> <span class="s">&#34;王老五&#34;</span><span class="p">,</span> <span class="n">score</span><span class="p">:</span> <span class="mi">22</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">player1</span><span class="p">.</span><span class="n">playerLevel</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">player1</span><span class="p">.</span><span class="n">say</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">player1</span><span class="p">.</span><span class="n">money</span><span class="p">=</span><span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="s">&#34;我现在有</span><span class="si">\(</span><span class="n">player1</span><span class="p">.</span><span class="n">money</span><span class="si">)</span><span class="s">金币&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">player1</span><span class="p">.</span><span class="n">say</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//定义结构体</span>
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">Student</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">name</span><span class="p">:</span><span class="nb">String</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">age</span><span class="p">:</span><span class="nb">Int</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">gender</span><span class="p">:</span><span class="nb">String</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">student1</span> <span class="p">=</span> <span class="n">Student</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&#34;赵三&#34;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="n">gender</span><span class="p">:</span> <span class="s">&#34;男&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">student1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//定义协议（类似Java的接口）</span>
+</span></span><span class="line"><span class="cl"><span class="kd">protocol</span> <span class="nc">Teacher</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">teacherName</span><span class="p">:</span><span class="nb">String</span> <span class="p">{</span><span class="kr">get</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">subjects</span><span class="p">:[</span><span class="nb">String</span><span class="p">]{</span><span class="kr">get</span> <span class="kr">set</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">teach</span><span class="p">(</span><span class="n">subject</span><span class="p">:</span><span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">study</span><span class="p">(</span><span class="n">subject</span><span class="p">:</span><span class="nb">String</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ClassTeacher</span><span class="p">:</span><span class="n">Teacher</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">teacherName</span><span class="p">:</span><span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">subjects</span> <span class="p">=</span> <span class="p">[</span><span class="nb">String</span><span class="p">]()</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="nb">String</span><span class="p">,</span><span class="n">subjects</span><span class="p">:[</span><span class="nb">String</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">teacherName</span> <span class="p">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">subjects</span> <span class="p">=</span> <span class="n">subjects</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">teach</span><span class="p">(</span><span class="n">subject</span><span class="p">:</span><span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">subject</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">study</span><span class="p">(</span><span class="n">subject</span><span class="p">:</span><span class="nb">String</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;学会了</span><span class="si">\(</span><span class="n">subject</span><span class="si">)</span><span class="s">！&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">subjects</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">subject</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">say</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;我是</span><span class="si">\(</span><span class="kc">self</span><span class="p">.</span><span class="n">teacherName</span><span class="si">)</span><span class="s">，我教</span><span class="si">\(</span><span class="kc">self</span><span class="p">.</span><span class="n">subjects</span><span class="p">.</span><span class="n">joined</span><span class="si">(</span><span class="n">separator</span><span class="p">:</span> <span class="s">&#34;,&#34;</span><span class="si">))</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">lishi</span> <span class="p">=</span> <span class="n">ClassTeacher</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&#34;李四&#34;</span><span class="p">,</span> <span class="n">subjects</span><span class="p">:</span> <span class="p">[</span><span class="s">&#34;语文&#34;</span><span class="p">,</span><span class="s">&#34;数学&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">lishi</span><span class="p">.</span><span class="n">study</span><span class="p">(</span><span class="n">subject</span><span class="p">:</span> <span class="s">&#34;化学&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">lishi</span><span class="p">.</span><span class="n">say</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">extension</span> <span class="nc">ClassTeacher</span><span class="p">{</span>     <span class="c1">//拓展类，添加新功能</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">hit</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="kc">self</span><span class="p">.</span><span class="n">teacherName</span><span class="si">)</span><span class="s">，打！打！打！&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">zhangsan</span> <span class="p">=</span> <span class="n">ClassTeacher</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&#34;张三&#34;</span><span class="p">,</span> <span class="n">subjects</span><span class="p">:</span> <span class="p">[</span><span class="s">&#34;生物&#34;</span><span class="p">,</span><span class="s">&#34;地理&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">zhangsan</span><span class="p">.</span><span class="n">hit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">lishi</span><span class="p">.</span><span class="n">hit</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
