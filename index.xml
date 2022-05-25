@@ -5,7 +5,23 @@
     <description>Recent content on Makki&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 May 2022 10:52:59 +0800</lastBuildDate><atom:link href="https://mort4l.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mort4l.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title> M1刷写esp32-c3报错 01070000</title>
+    <link>https://mort4l.github.io/post/m1-esp32-write-flash/</link>
+    <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
+    <author>Makki</author>
+    <guid>https://mort4l.github.io/post/m1-esp32-write-flash/</guid>
+    <description>
+        &lt;p&gt;用M1的MacBook刷写esp32-c3报错&lt;code&gt;A fatal error occurred: Failed to write to target RAM (result was 01070000: Operation timed out)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;原因是macOS的系统自带驱动不对，需要重新安装&lt;a href=&#34;http://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html&#34;&gt;官网提供的驱动&lt;/a&gt;,在安装的时候会因为系统安全限制不让允许安装。&lt;/p&gt;
+&lt;p&gt;安装官网提供的文档以及过程中的提示操作即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/H3woDaK.png&#34; alt=&#34;刷写成功&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/zsdtP0d.png&#34; alt=&#34;连接成功&#34;&gt;&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>Swift学习笔记</title>
     <link>https://mort4l.github.io/post/swift-study/</link>
