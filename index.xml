@@ -1,17 +1,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Makki&#39;s Blog</title>
-    <link>https://mort4l.github.io/</link>
+    <link>https://6pi.cc/</link>
     <description>Recent content on Makki&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mort4l.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://6pi.cc/index.xml" rel="self" type="application/rss+xml" />
     <item>
     <title> M1刷写esp32-c3报错 01070000</title>
-    <link>https://mort4l.github.io/post/m1-esp32-write-flash/</link>
+    <link>https://6pi.cc/post/m1-esp32-write-flash/</link>
     <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
     <author>Makki</author>
-    <guid>https://mort4l.github.io/post/m1-esp32-write-flash/</guid>
+    <guid>https://6pi.cc/post/m1-esp32-write-flash/</guid>
     <description>
         &lt;p&gt;用M1的MacBook刷写esp32-c3报错&lt;code&gt;A fatal error occurred: Failed to write to target RAM (result was 01070000: Operation timed out)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;原因是macOS的系统自带驱动不对，需要重新安装&lt;a href=&#34;http://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html&#34;&gt;官网提供的驱动&lt;/a&gt;,在安装的时候会因为系统安全限制不让允许安装。&lt;/p&gt;
@@ -24,10 +24,10 @@
     
     <item>
     <title>Swift学习笔记</title>
-    <link>https://mort4l.github.io/post/swift-study/</link>
+    <link>https://6pi.cc/post/swift-study/</link>
     <pubDate>Sat, 21 May 2022 10:52:59 +0800</pubDate>
     <author>Makki</author>
-    <guid>https://mort4l.github.io/post/swift-study/</guid>
+    <guid>https://6pi.cc/post/swift-study/</guid>
     <description>
         &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -547,10 +547,10 @@
     
     <item>
     <title>Django学习笔记</title>
-    <link>https://mort4l.github.io/post/python-django/</link>
+    <link>https://6pi.cc/post/python-django/</link>
     <pubDate>Tue, 17 May 2022 23:24:04 +0800</pubDate>
     <author>Makki</author>
-    <guid>https://mort4l.github.io/post/python-django/</guid>
+    <guid>https://6pi.cc/post/python-django/</guid>
     <description>
         &lt;h1 id=&#34;初始化&#34;&gt;初始化&lt;/h1&gt;
 &lt;p&gt;使用命令&lt;code&gt;django-admin startproject HelloWorld&lt;/code&gt;创建一个名为Hello World的项目&lt;/p&gt;
@@ -587,10 +587,10 @@
     
     <item>
     <title> Java学习笔记</title>
-    <link>https://mort4l.github.io/post/java-study/</link>
+    <link>https://6pi.cc/post/java-study/</link>
     <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
     <author>Makki</author>
-    <guid>https://mort4l.github.io/post/java-study/</guid>
+    <guid>https://6pi.cc/post/java-study/</guid>
     <description>
         &lt;blockquote&gt;
 &lt;p&gt;一个源文件只能有一个public类，所有类都可有main方法。
@@ -1163,10 +1163,10 @@
     
     <item>
     <title>小程序列表渲染</title>
-    <link>https://mort4l.github.io/post/wechat-mini-program-list-rendering/</link>
+    <link>https://6pi.cc/post/wechat-mini-program-list-rendering/</link>
     <pubDate>Thu, 27 May 2021 23:24:04 +0800</pubDate>
     <author>Makki</author>
-    <guid>https://mort4l.github.io/post/wechat-mini-program-list-rendering/</guid>
+    <guid>https://6pi.cc/post/wechat-mini-program-list-rendering/</guid>
     <description>
         &lt;h1 id=&#34;小程序列表渲染for循环&#34;&gt;小程序列表渲染(for循环)&lt;/h1&gt;
 &lt;h3 id=&#34;code&#34;&gt;code&lt;/h3&gt;
@@ -1194,10 +1194,10 @@ name:mike——age:29
     
     <item>
     <title>vscode在macOS下的快捷键</title>
-    <link>https://mort4l.github.io/post/vscode-shortcut-key-macos/</link>
+    <link>https://6pi.cc/post/vscode-shortcut-key-macos/</link>
     <pubDate>Mon, 17 May 2021 10:43:09 +0800</pubDate>
     
-    <guid>https://mort4l.github.io/post/vscode-shortcut-key-macos/</guid>
+    <guid>https://6pi.cc/post/vscode-shortcut-key-macos/</guid>
     <description>
         &lt;h3 id=&#34;全局&#34;&gt;全局&lt;/h3&gt;
 &lt;hr&gt;
@@ -1367,10 +1367,10 @@ name:mike——age:29
     
     <item>
     <title>moviepy报错以及输出视频无声的解决方法</title>
-    <link>https://mort4l.github.io/post/moviepy_question/</link>
+    <link>https://6pi.cc/post/moviepy_question/</link>
     <pubDate>Sun, 16 May 2021 10:52:59 +0800</pubDate>
     <author>Makki</author>
-    <guid>https://mort4l.github.io/post/moviepy_question/</guid>
+    <guid>https://6pi.cc/post/moviepy_question/</guid>
     <description>
         &lt;p&gt;搞了一晚上的moviepy剪辑，加网上的各种参数以及剪切视频/音乐长度。都无法解决视频无声的问题。&lt;/p&gt;
 &lt;p&gt;而且把视频载入进去后无法直接输出。&lt;/p&gt;
@@ -1382,10 +1382,10 @@ name:mike——age:29
     
     <item>
     <title>Java获取键盘输入</title>
-    <link>https://mort4l.github.io/post/java-get-input/</link>
+    <link>https://6pi.cc/post/java-get-input/</link>
     <pubDate>Sat, 01 May 2021 12:00:00 +0000</pubDate>
     <author>Makki</author>
-    <guid>https://mort4l.github.io/post/java-get-input/</guid>
+    <guid>https://6pi.cc/post/java-get-input/</guid>
     <description>
         &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1451,10 +1451,10 @@ name:mike——age:29
     
     <item>
     <title>Java运算符</title>
-    <link>https://mort4l.github.io/post/java-operator/</link>
+    <link>https://6pi.cc/post/java-operator/</link>
     <pubDate>Sat, 01 May 2021 08:00:00 +0000</pubDate>
     <author>Makki</author>
-    <guid>https://mort4l.github.io/post/java-operator/</guid>
+    <guid>https://6pi.cc/post/java-operator/</guid>
     <description>
         &lt;h2 id=&#34;算术运算符&#34;&gt;算术运算符&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1597,10 +1597,10 @@ name:mike——age:29
     
     <item>
     <title>Java基本数据类型</title>
-    <link>https://mort4l.github.io/post/java-basic-data-type/</link>
+    <link>https://6pi.cc/post/java-basic-data-type/</link>
     <pubDate>Sat, 01 May 2021 00:01:00 +0000</pubDate>
     <author>Makki</author>
-    <guid>https://mort4l.github.io/post/java-basic-data-type/</guid>
+    <guid>https://6pi.cc/post/java-basic-data-type/</guid>
     <description>
         &lt;h4 id=&#34;整数型&#34;&gt;整数型&lt;/h4&gt;
 &lt;p&gt;byte  short int long&lt;/p&gt;
@@ -1658,10 +1658,10 @@ name:mike——age:29
     
     <item>
     <title>Hello World!</title>
-    <link>https://mort4l.github.io/post/hello-world/</link>
+    <link>https://6pi.cc/post/hello-world/</link>
     <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
     <author>Makki</author>
-    <guid>https://mort4l.github.io/post/hello-world/</guid>
+    <guid>https://6pi.cc/post/hello-world/</guid>
     <description>
         &lt;p&gt;Hello World !&lt;/p&gt;
 &lt;p&gt;this is my first post!!&lt;/p&gt;
